@@ -5,9 +5,10 @@ export const TileList = ({ objects }) => {
   let tilesListToRender = [];
 
   if (objects) {
-    tilesListToRender = objects.map((object) => (
-    <Tile name={object.name} description={object} />
-  ));}
+    tilesListToRender = objects.map((tile, index) => {
+      const {name, ...description } = tile;
+    return <Tile key={index} name={name} description={description} />
+    });}
 
   return (
     <div>
