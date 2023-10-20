@@ -29,11 +29,11 @@ export const AppointmentForm = ({
     <>
     <form onSubmit={handleSubmit}>
       <label for="title">Name: </label>
-      <input name="title" onChange={({target}) => setName(target.value)} value={name}/>
+      <input type="text" name="title" onChange={({target}) => setName(target.value)} value={name}/>
       <label for="date">Date: </label>
-      <input name="date" onChange={({target}) => setDate(target.value)} value={date} min={getTodayString()}/>
+      <input type="date" name="date" onChange={({target}) => setDate(target.value)} value={date} min={getTodayString()}/>
       <label for="time">Time: </label>
-      <input name="time" onChange={({target}) => setTime(target.value)} value={time}/>
+      <input type="time" name="time" onChange={({target}) => setTime(target.value)} value={time}/>
       <ContactPicker contacts={contacts} handleOnChange={handleOnChange}/>
       <button type="submit">Submit</button>
     </form>
